@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Layout, Menu } from 'antd';
 import './Dashboard.css';
 import { PieChartOutlined } from '@ant-design/icons';
+import LineChart from './LineChart';
+
 
 const { Header, Content, Footer, Sider } = Layout;
 
@@ -39,42 +41,9 @@ const Dashboard = () => {
       <Header style={{ background: '#fff', padding: 0, textAlign: 'center'}} >DRONE EMPRIT</Header>
       <Content style={{ margin: '24px 16px', padding: '24', minHeight: 280, overflow: 'initial' }}>
         <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
-        ...
-          <br />
-          Really
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          long
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          ...
-          <br />
-          content
-          </div>
+           <LineChart/>
+        </div>
+        <div className='button'></div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Erwin Haryono ©2022 Created by rangersitem</Footer>
     </Layout>
