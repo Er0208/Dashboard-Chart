@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { Layout, Menu } from 'antd';
+import { Layout, Menu, Card, Space, Button } from 'antd';
 import './Dashboard.css';
-import { PieChartOutlined } from '@ant-design/icons';
+import { PieChartOutlined, VerticalAlignBottomOutlined } from '@ant-design/icons';
 import LineChart from './LineChart';
+
+
 
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -14,6 +16,11 @@ const Dashboard = () => {
     setCollapsed(!collapsed);
 
   };
+
+  const HandleClick = () => {
+    console.log('LiceChart');
+  }
+
 
   return (
     <Layout>
@@ -41,9 +48,21 @@ const Dashboard = () => {
       <Header style={{ background: '#fff', padding: 0, textAlign: 'center'}} >DRONE EMPRIT</Header>
       <Content style={{ margin: '24px 16px', padding: '24', minHeight: 280, overflow: 'initial' }}>
         <div style={{ padding: 24, background: '#fff', textAlign: 'center' }}>
-           <LineChart/>
+          <Space direction="horisontal">
+            <Card title="Card" style={{ width: 550 }}>
+              <LineChart />
+              <Button type="primary" shape="round" icon ={<VerticalAlignBottomOutlined /> } onclick={HandleClick}>
+                Dwonload
+              </Button>
+            </Card>
+            <Card title="Card" style={{ width: 550 }}>
+              <LineChart />
+              <Button type="primary" shape="round" icon ={<VerticalAlignBottomOutlined /> } onclick={HandleClick}>
+                Dwonload 
+              </Button>
+            </Card>
+          </Space>
         </div>
-        <div className='button'></div>
       </Content>
       <Footer style={{ textAlign: 'center' }}>Erwin Haryono ©2022 Created by rangersitem</Footer>
     </Layout>

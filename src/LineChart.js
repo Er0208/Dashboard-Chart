@@ -1,7 +1,11 @@
 import React from 'react'
 import { Line } from 'react-chartjs-2'
+import './Dashboard.css';
+
+
 
 function LineChart () {
+  
   const data = {
     labels: [
       'Jan',
@@ -28,8 +32,9 @@ function LineChart () {
         pointBorderColor: 'rgba(54, 162, 235, 0.2)'
       }
     ]
+    
   }
-
+  
   const options = {
     title: {
       display: true,
@@ -49,6 +54,7 @@ function LineChart () {
   }
 
   return <Line data={data} options={options} />
+  
 }
 
 export default LineChart
